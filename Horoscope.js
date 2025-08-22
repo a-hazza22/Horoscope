@@ -66,4 +66,40 @@ let zodiacSign = "";
 let fortune = "";
 
 const lowerCaseMonth = birthMonth.toLowerCase();
+if (lowerCaseMonth === "january") {
+  zodiacSign = "Capricorn";
+} else if (lowerCaseMonth === "february") {
+  zodiacSign = "Aquarius";
+} else if (lowerCaseMonth === "march") {
+  zodiacSign = "Pisces";
+} else if (lowerCaseMonth === "april") {
+  zodiacSign = "Aries";
+} else if (lowerCaseMonth === "may") {
+  zodiacSign = "Taurus";
+} else if (lowerCaseMonth === "june") {
+  zodiacSign = "Gemini";
+} else if (lowerCaseMonth === "july") {
+  zodiacSign = "Cancer";
+} else if (lowerCaseMonth === "august") {
+  zodiacSign = "Leo";
+} else if (lowerCaseMonth === "september") {
+  zodiacSign = "Virgo";
+} else if (lowerCaseMonth === "october") {
+  zodiacSign = "Libra";
+} else if (lowerCaseMonth === "november") {
+  zodiacSign = "Scorpio";
+} else if (lowerCaseMonth === "december") {
+  zodiacSign = "Sagittarius";
+} else {
+  console.log("Please enter a valid birth month.");
+}
+
+if (zodiacSign) {
+  const fortunesArray = fortunes[zodiacSign];
+  const randomIndex = Math.floor(Math.random() * fortunesArray.length);
+  fortune = fortunesArray[randomIndex];
+
+  console.log(`Your zodiac sign is: ${zodiacSign}`);
+  console.log(`Your fortune today: ${fortune}`);
+}
 
